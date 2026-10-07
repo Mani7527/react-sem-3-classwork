@@ -1,0 +1,145 @@
+.bk-wall-section {
+  padding: 16px 0 28px;
+  background-color: var(--bk-cream-bg);
+}
+
+.bk-wall-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.bk-wall-banner-card {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  border: 1px solid rgba(80, 35, 20, 0.3);
+}
+
+.bk-wall-banner-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.bk-wall-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(60, 20, 10, 0.2) 0%, rgba(35, 12, 5, 0.65) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+.bk-wall-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  color: #F8F0DE;
+}
+
+.bk-wall-logo-wrap {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bk-wall-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
+}
+
+.bk-wall-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.bk-wall-heading {
+  font-family: var(--font-display);
+  color: #F8F0DE;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.95;
+  text-shadow: 
+    2px 2px 0px #35150A,
+    3px 4px 0px #220D06,
+    5px 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+.bk-wall-word {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+.bk-wall-brand {
+  font-size: 4.2rem;
+  letter-spacing: 2px;
+}
+
+/* Disclaimer text beneath the banner */
+.bk-disclaimer-wrap {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.bk-disclaimer-text {
+  font-size: 0.68rem;
+  color: #7A7267;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bk-wall-banner-card {
+    height: 180px;
+  }
+  .bk-wall-content {
+    gap: 20px;
+  }
+  .bk-wall-logo-wrap {
+    width: 75px;
+    height: 75px;
+  }
+  .bk-wall-word {
+    font-size: 1.8rem;
+  }
+  .bk-wall-brand {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bk-wall-banner-card {
+    height: 140px;
+  }
+  .bk-wall-content {
+    gap: 12px;
+  }
+  .bk-wall-logo-wrap {
+    width: 55px;
+    height: 55px;
+  }
+  .bk-wall-word {
+    font-size: 1.3rem;
+  }
+  .bk-wall-brand {
+    font-size: 1.9rem;
+  }
+}
